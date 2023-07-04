@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+   <a-scene embedded arjs>
 
     <a-assets>
       <a-asset-item id="model-fb" src="assets/assemblyfb.glb"></a-asset-item>
@@ -18,10 +18,10 @@
       <a-entity gltf-model="#model-fb" scale="-1 1 1"></a-entity>
     </a-entity>
 
-    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
     <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera type="pattern" patternUrl="./assets/markers/marker.patt"></a-marker-camera>
-    <a-marker type="pattern" patternUrl="./assets/markers/marker.patt"></a-marker>
+    <!-- <a-marker-camera type="pattern" patternUrl="./assets/markers/marker.patt"></a-marker-camera>
+    <a-marker type="pattern" patternUrl="./assets/markers/marker.patt"></a-marker> -->
+    <a-marker-camera present="hiro"></a-marker-camera>
   </a-scene>
 </body>
 
